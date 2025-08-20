@@ -1,116 +1,41 @@
-<!-- Harshvardhan Dhabhai – Neon Tech Banner (1200x360) -->
+<!-- Harshvardhan Dhabhai – Neon Tech Banner -->
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360">
   <defs>
-    <!-- Background gradient: deep navy -> dark indigo -->
+    <!-- Background gradient -->
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%"  stop-color="#0b1220"/>
-      <stop offset="60%" stop-color="#0a0f1c"/>
       <stop offset="100%" stop-color="#090c16"/>
     </linearGradient>
 
-    <!-- Soft vignette -->
-    <radialGradient id="vignette" cx="50%" cy="50%" r="60%">
-      <stop offset="70%" stop-color="rgba(0,0,0,0)"/>
-      <stop offset="100%" stop-color="rgba(0,0,0,0.55)"/>
-    </radialGradient>
-
-    <!-- Neon glows -->
-    <filter id="glowBlue">
-      <feGaussianBlur stdDeviation="6" result="b"/>
-      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <filter id="glowPurple">
-      <feGaussianBlur stdDeviation="6" result="b"/>
-      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-
-    <!-- Thin outer glow for text -->
+    <!-- Glow filters -->
     <filter id="textGlow" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feColorMatrix type="matrix" values="
-        0 0 0 0  0.30
-        0 0 0 0  0.75
-        0 0 0 0  1.00
-        0 0 0 1  0" result="c"/>
-      <feMerge><feMergeNode in="c"/><feMergeNode in="SourceGraphic"/></feMerge>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
     </filter>
 
-    <!-- Grid pattern -->
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1b2437" stroke-width="1"/>
-    </pattern>
-
-    <!-- Tech nodes (small glowing dots) -->
-    <filter id="dot">
-      <feGaussianBlur stdDeviation="2" result="b"/>
-      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-
-    <!-- Accent gradient stroke -->
     <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%"  stop-color="#3ecfff"/>
       <stop offset="100%" stop-color="#9b5cff"/>
     </linearGradient>
   </defs>
 
-  <!-- Background layers -->
+  <!-- Background -->
   <rect width="1200" height="360" fill="url(#bg)"/>
-  <rect width="1200" height="360" fill="url(#grid)" opacity="0.18"/>
-  <rect width="1200" height="360" fill="url(#vignette)"/>
-
-  <!-- Decorative neon arcs/lines -->
-  <g opacity="0.6">
-    <path d="M-50 80 Q 250 10, 500 80 T 1200 80" fill="none" stroke="#3ecfff" stroke-width="2" filter="url(#glowBlue)" opacity="0.45"/>
-    <path d="M-40 300 Q 350 240, 700 300 T 1240 300" fill="none" stroke="#9b5cff" stroke-width="2" filter="url(#glowPurple)" opacity="0.45"/>
-  </g>
-
-  <!-- Accent capsule behind title -->
-  <rect x="320" y="98" rx="18" ry="18" width="560" height="40" fill="rgba(12,18,34,0.55)" stroke="url(#accent)" stroke-width="1" opacity="0.9"/>
 
   <!-- Title -->
-  <g font-family="Inter, Segoe UI, Roboto, Arial, sans-serif" text-anchor="middle">
-    <text x="600" y="90" font-size="22" fill="#9db2d0">Hi 👋 I’m</text>
-    <text x="600" y="150" font-size="52" fill="#d7efff" filter="url(#textGlow)" font-weight="700"
-          style="letter-spacing:0.5px">Harshvardhan Dhabhai</text>
-    <text x="600" y="190" font-size="18" fill="#a0b4d6">
-      A Passionate Software Engineer • DSA • Web Dev • OpenCV
+  <g font-family="Segoe UI, Arial, sans-serif" text-anchor="middle">
+    <text x="600" y="150" font-size="52" fill="#d7efff" filter="url(#textGlow)" font-weight="700">
+      Harshvardhan Dhabhai
+    </text>
+    <text x="600" y="200" font-size="20" fill="#9db2d0">
+      Software Engineer • DSA • Web Dev • OpenCV
     </text>
   </g>
 
-  <!-- Pill stats (optional—purely visual) -->
-  <g transform="translate(200,215)" font-family="Inter,Segoe UI,Arial" font-size="14">
-    <g>
-      <rect x="0" y="0" width="220" height="44" rx="12" fill="rgba(20,30,55,0.65)" stroke="#243252"/>
-      <text x="16" y="28" fill="#a8c1ff">Profile Views</text>
-      <text x="190" y="28" fill="#3ecfff" text-anchor="end">∞</text>
-    </g>
-    <g transform="translate(240,0)">
-      <rect x="0" y="0" width="220" height="44" rx="12" fill="rgba(20,30,55,0.65)" stroke="#243252"/>
-      <text x="16" y="28" fill="#a8c1ff">Followers</text>
-      <text x="190" y="28" fill="#3ecfff" text-anchor="end">⭐</text>
-    </g>
-    <g transform="translate(480,0)">
-      <rect x="0" y="0" width="220" height="44" rx="12" fill="rgba(20,30,55,0.65)" stroke="#243252"/>
-      <text x="16" y="28" fill="#a8c1ff">Stars</text>
-      <text x="190" y="28" fill="#3ecfff" text-anchor="end">⭐</text>
-    </g>
-  </g>
-
-  <!-- Tech “circuit” doodles -->
-  <g stroke="url(#accent)" stroke-width="1.6" opacity="0.5">
-    <path d="M980 72 h60 v36 h40" fill="none"/>
-    <path d="M140 320 h80 v-40 h40" fill="none"/>
-  </g>
-
-  <!-- Glowing node dots -->
-  <g filter="url(#dot)">
-    <circle cx="1030" cy="108" r="3" fill="#3ecfff" opacity="0.9"/>
-    <circle cx="1120" cy="108" r="3" fill="#9b5cff" opacity="0.9"/>
-    <circle cx="180"  cy="280" r="3" fill="#3ecfff" opacity="0.9"/>
-    <circle cx="260"  cy="280" r="3" fill="#9b5cff" opacity="0.9"/>
-    <circle cx="940"  cy="260" r="3" fill="#3ecfff" opacity="0.9"/>
-  </g>
-
-  <!-- Bottom accent line -->
-  <rect x="0" y="356" width="1200" height="4" fill="url(#accent)" opacity="0.85"/>
+  <!-- Accent line -->
+  <rect x="0" y="356" width="1200" height="4" fill="url(#accent)" />
 </svg>
+
