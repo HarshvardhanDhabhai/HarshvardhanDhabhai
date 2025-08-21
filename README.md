@@ -22,7 +22,7 @@
 - 🌱 Currently learning **Data Structures & Algorithms**  
 - 👯 Looking to collaborate on **App Development Projects**  
 - 🤝 Seeking guidance in **App Development**  
-- 💬 Ask me about **C++ | Python | Web Development**  
+- 💬 Ask me about **C++ | Python **  
 - 📫 Reach me at **harshvardhandhabhai2004@gmail.com**  
 - ⚡ Fun Fact: **Dreaming Big → FAANG within a year 😉**  
 
