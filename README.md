@@ -48,7 +48,7 @@
 
 ### 🛠️ Languages and Tools
 <p align="center"> 
-  <img src="https://skillicons.dev/icons?i=cpp,python,mysql,opencv,figma,html,css,js,git" />
+  <img src="https://skillicons.dev/icons?i=cpp,python,mysql,opencv" />
 </p>
 
 ---
